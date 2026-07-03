@@ -31,4 +31,10 @@ func update_anim(direction: float):
 	else:
 		self.animSprite.play("idle_anim")
 		
-		
+func collect_coin():
+	controller.collect_coin()
+	print("Coins: ", controller.coin_count)	
+
+
+func _on_area_2d_collected() -> void:
+	self.collect_coin()
