@@ -458,7 +458,8 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=15126994]
 sprite_frames = SubResource("SpriteFrames_3vyb7")
-animation = &"idle_anim"
+animation = &"dash_anim"
+frame_progress = 0.9227259
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1407294693]
 position = Vector2(1.5, 3)
