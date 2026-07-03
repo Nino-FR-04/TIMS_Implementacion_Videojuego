@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c86t0bbiu6erk" path="res://assets/character/SPRITE_SHEET.png" id="2_rlkm5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5iqjx"]
-size = Vector2(222, 20)
+size = Vector2(357, 28)
 
 [node name="TestScene" type="Node2D" unique_id=1974704247]
 
@@ -13,9 +13,10 @@ size = Vector2(222, 20)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1328080611]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1186805989]
-position = Vector2(27, 197)
+position = Vector2(-8, 197)
+scale = Vector2(1.21875, 1)
 texture = ExtResource("2_rlkm5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=174136024]
-position = Vector2(-26, 43)
+position = Vector2(-14.5, 47)
 shape = SubResource("RectangleShape2D_5iqjx")
