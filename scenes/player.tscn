@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c86t0bbiu6erk" path="res://assets/character/SPRITE_SHEET.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bavjw5dntddj1" path="res://scripts/playerScripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://dv0652ywhvn02" path="res://scripts/cameraScripts/camera_2d.gd" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -466,3 +467,5 @@ position = Vector2(1.5, 3)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1629740865]
+zoom = Vector2(4, 4)
+script = ExtResource("3_qhqgy")
