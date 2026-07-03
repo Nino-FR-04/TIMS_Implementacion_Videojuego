@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://4k72uw5fd4su"]
+
+[ext_resource type="PackedScene" uid="uid://c3ry4iud81i1d" path="res://scenes/player.tscn" id="2_n77mx"]
+[ext_resource type="Texture2D" uid="uid://c86t0bbiu6erk" path="res://assets/character/SPRITE_SHEET.png" id="2_rlkm5"]
+
+[node name="TestScene" type="Node2D" unique_id=1974704247]
+
+[node name="CharacterBody2D" parent="." unique_id=1211448628 instance=ExtResource("2_n77mx")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186805989]
+position = Vector2(27, 197)
+texture = ExtResource("2_rlkm5")

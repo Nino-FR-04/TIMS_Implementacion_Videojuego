@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3ry4iud81i1d"]
 
 [ext_resource type="Texture2D" uid="uid://c86t0bbiu6erk" path="res://assets/character/SPRITE_SHEET.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://cidgbn3qh2ky5" path="res://scripts/playerScripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://bavjw5dntddj1" path="res://scripts/playerScripts/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -231,7 +231,7 @@ region = Rect2(64, 224, 32, 32)
 atlas = ExtResource("1_3vyb7")
 region = Rect2(96, 224, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5h11f"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vyb7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -450,21 +450,18 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx8n8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(9, 16)
 
-[node name="Player" type="Node2D" unique_id=1885179193]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1459949718]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1211448628]
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=187656032]
-sprite_frames = SubResource("SpriteFrames_5h11f")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=15126994]
+sprite_frames = SubResource("SpriteFrames_3vyb7")
 animation = &"idle_anim"
-frame_progress = 0.09684644
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=902378359]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1407294693]
 position = Vector2(1.5, 3)
-shape = SubResource("RectangleShape2D_bx8n8")
+shape = SubResource("RectangleShape2D_g2els")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1320268008]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1629740865]
