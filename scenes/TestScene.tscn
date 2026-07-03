@@ -3,10 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://c3ry4iud81i1d" path="res://scenes/player.tscn" id="2_n77mx"]
 [ext_resource type="Texture2D" uid="uid://c86t0bbiu6erk" path="res://assets/character/SPRITE_SHEET.png" id="2_rlkm5"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5iqjx"]
+size = Vector2(222, 20)
+
 [node name="TestScene" type="Node2D" unique_id=1974704247]
 
 [node name="CharacterBody2D" parent="." unique_id=1211448628 instance=ExtResource("2_n77mx")]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186805989]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1328080611]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1186805989]
 position = Vector2(27, 197)
 texture = ExtResource("2_rlkm5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=174136024]
+position = Vector2(-26, 43)
+shape = SubResource("RectangleShape2D_5iqjx")

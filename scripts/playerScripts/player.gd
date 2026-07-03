@@ -4,17 +4,28 @@ var controller := PlayerController.new()
 @onready var animSprite = $AnimatedSprite2D
 
 func _physics_process(delta):
+	
+	self.controller.on_floor = self.is_on_floor()
 	var direction := Input.get_axis("left", "right")
-	print("Direction:", direction)
 	controller.move(direction)
+	
+	if Input.is_action_just_pressed("jump"):
+		self.controller.jump()
+		
+	self.controller.apply_gravity(delta)
 	velocity = controller.velocity
 
 	move_and_slide()
 	self.update_anim(direction)
-	print("Posición:", global_position)
 	
 func update_anim(direction: float):
-	if direction != 0:
+	
+	if !self.is_on_floor():
+		if self.velocity.y < 0:
+			self.animSprite.play("jump_anim")
+		else:
+			self.animSprite.play("fall_anim")
+	elif direction != 0:
 		self.animSprite.flip_h = direction < 0
 		self.animSprite.play("run_anim")
 	else:
