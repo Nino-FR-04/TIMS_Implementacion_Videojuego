@@ -5,8 +5,8 @@ var player
 
 #Se ejecuta antes de cada test
 func before_each():
-	player = preload("res://scripts/player.gd").new()
-	
+	player = preload("res://scripts/playerScripts/player_controller.gd").new()
+
 #Test - Estado: Idle
 func test_playerWithZeroVelocity():
 	assert_eq(player.velocity.x, 0.0)

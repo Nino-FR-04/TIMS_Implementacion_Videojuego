@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3ry4iud81i1d"]
 
 [ext_resource type="Texture2D" uid="uid://c86t0bbiu6erk" path="res://assets/character/SPRITE_SHEET.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://cidgbn3qh2ky5" path="res://scripts/playerScripts/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -455,6 +456,7 @@ size = Vector2(9, 16)
 [node name="Player" type="Node2D" unique_id=1885179193]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1459949718]
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=187656032]
 sprite_frames = SubResource("SpriteFrames_5h11f")
@@ -464,3 +466,5 @@ frame_progress = 0.09684644
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=902378359]
 position = Vector2(1.5, 3)
 shape = SubResource("RectangleShape2D_bx8n8")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1320268008]
