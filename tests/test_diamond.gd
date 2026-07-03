@@ -35,7 +35,7 @@ func test_diamondDoesNotUnlockedWithInsufficientCoins():
 	var result = diamond.try_open(player.coin_count)
 
 	assert_false(result)
-	assert_false(diamond.is_open)
+	assert_false(diamond.is_unlocked)
 
 # El diamante se desbloquea con la cantidad exacta
 func test_diamondUnlockedWithExactRequiredCoins():
@@ -47,7 +47,7 @@ func test_diamondUnlockedWithExactRequiredCoins():
 	var result = diamond.try_open(player.coin_count)
 
 	assert_true(result)
-	assert_true(diamond.is_open)
+	assert_true(diamond.is_unlocked)
 
 # Cambiar la cantidad de monedas requeridas
 func test_diamondWithDifferentRequiredAmount():
