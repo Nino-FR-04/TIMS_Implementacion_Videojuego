@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c3ry4iud81i1d" path="res://scenes/player.tscn" id="2_n77mx"]
 [ext_resource type="Texture2D" uid="uid://c86t0bbiu6erk" path="res://assets/character/SPRITE_SHEET.png" id="2_rlkm5"]
 [ext_resource type="PackedScene" uid="uid://da4q5wx6kjjol" path="res://scenes/coin.tscn" id="3_n77mx"]
+[ext_resource type="PackedScene" uid="uid://d3ylrovmhla4o" path="res://scenes/diamond.tscn" id="4_nb1wl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5iqjx"]
 size = Vector2(357, 28)
@@ -27,6 +28,10 @@ position = Vector2(87, 18)
 
 [node name="Area2D2" parent="." unique_id=1514862183 instance=ExtResource("3_n77mx")]
 position = Vector2(-136, 19)
+
+[node name="Area2D3" parent="." unique_id=1830656714 instance=ExtResource("4_nb1wl")]
+position = Vector2(131, 9)
+required_coins = 2
 
 [connection signal="collected" from="Area2D" to="CharacterBody2D" method="_on_area_2d_collected"]
 [connection signal="collected" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_collected"]

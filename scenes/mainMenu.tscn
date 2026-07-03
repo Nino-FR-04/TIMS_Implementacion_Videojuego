@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b4uw52ewayunp"]
+
+[ext_resource type="Script" uid="uid://cb6ubjd6xikro" path="res://scripts/menu/main_menu.gd" id="1_3d1i7"]
+[ext_resource type="Texture2D" uid="uid://bl00yg1falxjt" path="res://assets/background/back.png" id="1_qkhwq"]
+
+[node name="Menu_principal" type="Control" unique_id=805640310]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3d1i7")
+
+[node name="background_menu" type="TextureRect" parent="." unique_id=1353617140]
+self_modulate = Color(1, 1, 1, 0.5529412)
+layout_mode = 0
+offset_right = 1329.0
+offset_bottom = 742.0
+texture = ExtResource("1_qkhwq")
+
+[node name="Label" type="Label" parent="." unique_id=2094311747]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 203.0
+offset_top = 87.0
+offset_right = 1094.0
+offset_bottom = 237.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "COIN COLLECTION"
+
+[node name="buttons" type="VBoxContainer" parent="." unique_id=27706148]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 295.0
+offset_right = 890.0
+offset_bottom = 524.0
+theme_override_constants/separation = 40
+
+[node name="play" type="Button" parent="buttons" unique_id=1062763217]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "JUGAR"
+
+[node name="exit" type="Button" parent="buttons" unique_id=50367135]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "SALIR
+"
+
+[connection signal="pressed" from="buttons/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="buttons/exit" to="." method="_on_exit_pressed"]

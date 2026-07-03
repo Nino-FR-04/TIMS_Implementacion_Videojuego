@@ -16,6 +16,10 @@ func _physics_process(delta):
 	velocity = controller.velocity
 
 	move_and_slide()
+	
+	controller.velocity = velocity
+	controller.on_floor = is_on_floor()
+	
 	self.update_anim(direction)
 	
 func update_anim(direction: float):
